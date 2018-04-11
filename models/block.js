@@ -2,7 +2,7 @@
 const loader = require('./sequelizeLoader');
 const Sequelize = loader.Sequelize;
 
-const Block = loader.database.define(
+const BlockChain = loader.database.define(
   'blocks',
   {
     id: {
@@ -10,7 +10,7 @@ const Block = loader.database.define(
       primaryKey: true,
       autoIncrement: true
     },
-    content: {
+    data: {
       type: Sequelize.STRING,
       allowNull: false
     },
@@ -34,4 +34,4 @@ const Block = loader.database.define(
   }
 );
 
-module.exports = Block;
+module.exports = BlockChain;
